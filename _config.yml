@@ -1,0 +1,38 @@
+# SamWiki theme contract
+# Theme setup follows GitHub's Jekyll theme guide:
+# https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+#
+# Strategy: one supported theme, jekyll-theme-cayman, skinned in assets/css/style.scss.
+# Copied from sdcastillo/sdcastillo.github.io (cursor/samwiki-hub-f1dc):
+#   _config.yml
+#   assets/css/style.scss
+#   _layouts/default.html
+#   _includes/head-custom.html
+#   _includes/samwiki-nav.html
+# Pages in this project set `samwiki: true` in front matter.
+#
+# Publish from the default branch (`master`) at the repository root.
+# GitHub Pages serves the project at https://sdcastillo.github.io/Clustering/
+
+title: Clustering
+description: Explanations, simulations, and comparisons of k-means, k-medoids, and k-means++.
+theme: jekyll-theme-cayman
+show_downloads: false
+markdown: kramdown
+
+# The R Markdown sources open with YAML front matter. Leave them out of the
+# Jekyll build so the rendered HTML notes remain the files that are served.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - kmeans_clustering.Rmd
+  - kmeans_plus_plus.Rmd
+  - kmeans_plus_plus.Rproj
